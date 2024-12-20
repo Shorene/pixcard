@@ -23,10 +23,10 @@ const Footer = () => {
           <div className="col-md-4">
             <h5>Síguenos</h5>
             <div className="social-icons">
-              <a href="#" className="me-2"><Facebook size={24} /></a>
-              <a href="#" className="me-2"><Twitter size={24} /></a>
-              <a href="#" className="me-2"><Instagram size={24} /></a>
-              <a href="#" className="me-2"><Youtube size={24} /></a>
+              <a href="https://www.facebook.com/" className="me-2"><Facebook size={24} /></a>
+              <a href="https://x.com/" className="me-2"><Twitter size={24} /></a>
+              <a href="https://www.instagram.com/" className="me-2"><Instagram size={24} /></a>
+              <a href="https://www.youtube.com/" className="me-2"><Youtube size={24} /></a>
             </div>
           </div>
         </div>
