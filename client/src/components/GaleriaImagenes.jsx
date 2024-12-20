@@ -12,7 +12,7 @@ const GaleriaImagenes = () => {
       .then((response) => {
         // Mapea los datos para tener un array con src y alt
         const data = response.data.map((carta) => ({
-          src: `http://localhost:3001${carta.imagenUrl}`, // Combina la URL base con el campo imagenUrl
+          src: `${API_BASE_URL}${carta.imagenUrl}`, // Combina la URL base con el campo imagenUrl
           alt: carta.nombre, // Usa el nombre de la carta como alt
         }));
         setImagenes(data); // Actualiza el estado con las imágenes
