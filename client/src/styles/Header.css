@@ -1,0 +1,32 @@
+.divheader{
+    width: 50%;
+    float: left;
+  }
+  
+  .h1cab{
+    color: yellow;
+    text-align: center;
+  }
+  
+  .imagecab {
+    width: 100%;
+    height: 550px;
+    border-radius: 20px;
+    position: relative;
+    left: 400px;
+   
+  }
+  
+  .divitem {
+    text-align: center;
+  }
+  
+  .item {
+    font-size: 2rem;
+    margin-left: 5px;
+    border: 1px solid;
+    text-decoration: none;
+    border-radius: 10px;
+    position: relative;
+    left: 400px;
+  }

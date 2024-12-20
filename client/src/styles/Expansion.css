@@ -1,0 +1,220 @@
+.expansion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Cinzel', serif;
+  color: #ffd700;
+  background-color: rgba(10, 10, 26, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.expansion-titulo {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.expansion-descripcion {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: rgba(30, 42, 74, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.expansion-precio, .sobres-abiertos, .racha {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.racha {
+  color: #00ff00;
+}
+
+.btn-comprar-sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem auto;
+  background-color: #ffd700;
+  color: #1a1a2e;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-comprar-sobre:hover {
+  background-color: #ffec80;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+}
+
+.btn-comprar-sobre:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #1a1a2e;
+  border-top: 3px solid #ffd700;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.carta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 90vh;
+}
+
+.carta-item {
+  width: auto;
+  height: 80vh;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.carta-imagen {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-siguiente, .btn-cerrar-resumen {
+  background-color: #ffd700;
+  color: #1a1a2e;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-siguiente:hover, .btn-cerrar-resumen:hover {
+  background-color: #ffec80;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.5);
+}
+
+.resumen-container {
+  background-color: rgba(30, 42, 74, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.resumen-container h2 {
+  text-align: center;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.resumen-cartas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.resumen-carta {
+  width: auto;
+  height: 70vh;
+  position: relative;
+}
+
+.resumen-carta-imagen {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.rareza-comun { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+.rareza-rara { box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); }
+.rareza-epica { box-shadow: 0 010px rgba(138, 43, 226, 0.5); }
+.rareza-legendaria { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+
+@media (max-width: 768px) {
+  .expansion-titulo {
+    font-size: 2rem;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .carta-item {
+    height: 70vh;
+  }
+
+  .resumen-carta {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .carta-item {
+    height: 60vh;
+  }
+
+  .resumen-carta {
+    height: 50vh;
+  }
+
+  .resumen-container {
+    padding: 1rem;
+  }
+}
+
