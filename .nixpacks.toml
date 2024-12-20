@@ -1,0 +1,10 @@
+[build]
+run = "npm install && npm run build"
+
+[[mounts]]
+source = "client"
+target = "/app/client"
+
+[[mounts]]
+source = "server"
+target = "/app/server"
