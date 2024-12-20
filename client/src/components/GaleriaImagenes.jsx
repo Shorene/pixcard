@@ -4,10 +4,11 @@ import Axios from 'axios';
 
 const GaleriaImagenes = () => {
   const [imagenes, setImagenes] = useState([]);
+ const API_BASE_URL = 'https://pixcard-production.up.railway.app/';
 
   useEffect(() => {
     // Llama al servidor para obtener las imágenes
-    Axios.get('http://localhost:3001/api/cartas')
+    Axios.get(`${API_BASE_URL}/api/cartas`)
       .then((response) => {
         // Mapea los datos para tener un array con src y alt
         const data = response.data.map((carta) => ({
