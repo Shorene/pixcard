@@ -9,7 +9,7 @@ const Monedas = () => {
   const [minicoins, setMinicoins] = useState(""); // Cantidad de minicoins
   const [error, setError] = useState(""); // Mensaje de error
   const [success, setSuccess] = useState(""); // Mensaje de éxito
-  const navigate = useNavigate();
+  
 
   // Cargar usuarios al montar el componente
   useEffect(() => {
